@@ -10,12 +10,14 @@ function FormError({
   className?: string;
 }) {
   return (
-    <div
-      className={cn("text-red-500 text-[12px] w-full text-right", className)}
-    >
-      <BiSolidErrorCircle className="inline-block mr-1" />
-      {error}
-    </div>
+    error && (
+      <div
+        className={cn("text-red-500 text-[12px] w-full text-right", className)}
+      >
+        <BiSolidErrorCircle className="inline-block mr-1" />
+        {error}
+      </div>
+    )
   );
 }
 
