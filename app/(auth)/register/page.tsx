@@ -44,42 +44,44 @@ function Register() {
     mutate(data);
   };
   return (
-    <form
-      className="flex flex-col gap-6 w-full max-w-[400px]"
-      onSubmit={handleSubmit(onSubmit)}
-    >
-      {errors.root && (
-        <div className="p-4 bg-red-400 text-white rounded-lg flex items-center gap-4">
-          <RiErrorWarningFill color="white" />{" "}
-          <span>{errors.root.message}</span>
-        </div>
-      )}
-      <FormControl>
-        <FormLabel htmlFor="email" className="text-sm">
-          Fullname
-        </FormLabel>
-        <FormInput
-          type="text"
-          placeholder="Fullname"
-          {...register("fullName")}
-        />
-        <FormError error={errors.fullName?.message} />
-      </FormControl>
-      <FormControl>
-        <FormLabel htmlFor="email" className="text-sm">
-          Email
-        </FormLabel>
-        <FormInput type="text" placeholder="Email" {...register("email")} />
-        <FormError error={errors.email?.message} />
-      </FormControl>
-      <Button isLoading={isLoading}>Register</Button>
-      <Link
-        href="/login"
-        className="text-primary-dark underline underline-offset-2 text-[14px] text-center"
+    <>
+      <form
+        className="flex flex-col gap-6 w-full max-w-[400px]"
+        onSubmit={handleSubmit(onSubmit)}
       >
-        Already have an account ?
-      </Link>
-    </form>
+        {errors.root && (
+          <div className="p-4 bg-red-400 text-white rounded-lg flex items-center gap-4">
+            <RiErrorWarningFill color="white" />{" "}
+            <span>{errors.root.message}</span>
+          </div>
+        )}
+        <FormControl>
+          <FormLabel htmlFor="email" className="text-sm">
+            Fullname
+          </FormLabel>
+          <FormInput
+            type="text"
+            placeholder="Fullname"
+            {...register("fullName")}
+          />
+          <FormError error={errors.fullName?.message} />
+        </FormControl>
+        <FormControl>
+          <FormLabel htmlFor="email" className="text-sm">
+            Email
+          </FormLabel>
+          <FormInput type="text" placeholder="Email" {...register("email")} />
+          <FormError error={errors.email?.message} />
+        </FormControl>
+        <Button isLoading={isLoading}>Register</Button>
+        <Link
+          href="/login"
+          className="text-primary-dark underline underline-offset-2 text-[14px] text-center"
+        >
+          Already have an account ?
+        </Link>
+      </form>
+    </>
   );
 }
 
