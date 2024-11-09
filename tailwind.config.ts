@@ -11,7 +11,17 @@ export default {
       colors: {
         "primary-light": "var(--primary-light)",
         "primary-dark": "var(--primary-dark)",
-        "secondary-dark": "var(--secondary-dark",
+        "secondary-dark": "var(--secondary-dark)",
+        "secondary-light": "var(--secondary-light)",
+      },
+      keyframes: {
+        "caret-blink": {
+          "0%,70%,100%": { opacity: "1" },
+          "20%,50%": { opacity: "0" },
+        },
+      },
+      animation: {
+        "caret-blink": "caret-blink 1.2s ease-out infinite",
       },
     },
   },
