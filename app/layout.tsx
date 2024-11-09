@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-
+import QueryProvider from "@/providers/query-providers";
 // If loading a variable font, you don't need to specify the font weight
 const poppins = Poppins({
   subsets: ["latin"],
@@ -23,7 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.className}  antialiased`}>{children}</body>
+      <body className={`${poppins.className}  antialiased`}>
+        <QueryProvider>{children}</QueryProvider>
+      </body>
     </html>
   );
 }
