@@ -32,6 +32,9 @@
   .btn {
     @apply bg-primary-light overflow-hidden text-white py-2 text-[14px] sm:text-base sm:py-3 px-4 rounded-lg shadow-md text-center cursor-pointer transition-transform active:scale-[99%] relative hover:bg-opacity-95;
   }
+  .summary-type-icon {
+    @apply absolute -left-3 top-[-24px] z-10 w-[190px] object-contain !important;
+  }
 }
 
 body {
