@@ -13,6 +13,7 @@ export default {
         "primary-dark": "var(--primary-dark)",
         "secondary-dark": "var(--secondary-dark)",
         "secondary-light": "var(--secondary-light)",
+        "light-gray": "var(--light-gray)",
       },
       keyframes: {
         "caret-blink": {

@@ -11,7 +11,7 @@ function Button({
   return (
     <button
       className={cn(
-        "w-full bg-primary-light overflow-hidden text-white py-3 px-4 rounded-lg shadow-md text-center cursor-pointer transition-transform active:scale-[99%] relative",
+        "w-full bg-primary-light overflow-hidden text-white py-3 px-4 rounded-lg shadow-md text-center cursor-pointer transition-transform active:scale-[99%] hover:bg-opacity-95 relative",
         className
       )}
       {...props}
