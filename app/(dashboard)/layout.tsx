@@ -7,6 +7,7 @@ import { MdVideoLibrary } from "react-icons/md";
 import { IoPieChartSharp } from "react-icons/io5";
 import Link from "next/link";
 import Image from "next/image";
+import UploadProgress from "@/components/upload-progress";
 const SIDEBAR_ITEMS = [
   {
     label: "Dashboard",
@@ -36,7 +37,7 @@ const SIDEBAR_ITEMS = [
 ];
 function DashboardLayout({ children }: { children: ReactNode }) {
   return (
-    <main className="min-h-screen w-full flex flex-col">
+    <main className="min-h-screen w-full flex flex-col relative">
       <DashboardHeader />
 
       <div className="flex-1 flex">
@@ -88,6 +89,9 @@ function DashboardLayout({ children }: { children: ReactNode }) {
           {children}
         </div>
       </div>
+
+      {/* Progress bar */}
+      <UploadProgress />
     </main>
   );
 }
