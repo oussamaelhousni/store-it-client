@@ -53,6 +53,6 @@ body {
 }
 
 .custom-scroll::-webkit-scrollbar-thumb {
-  background-color: #000000;
+  background-color: #3e3e3e;
   border-radius: 8px;
 }

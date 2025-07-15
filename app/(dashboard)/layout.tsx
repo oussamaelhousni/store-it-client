@@ -17,22 +17,22 @@ const SIDEBAR_ITEMS = [
   {
     label: "Documents",
     icon: <IoDocuments size={20} />,
-    href: "/",
+    href: "/documents",
   },
   {
     label: "Images",
     icon: <BsImages size={20} />,
-    href: "/",
+    href: "/images",
   },
   {
     label: "Media",
     icon: <MdVideoLibrary size={20} />,
-    href: "/",
+    href: "/medias",
   },
   {
     label: "Other",
     icon: <IoPieChartSharp size={20} />,
-    href: "/",
+    href: "/others",
   },
 ];
 function DashboardLayout({ children }: { children: ReactNode }) {
@@ -85,7 +85,7 @@ function DashboardLayout({ children }: { children: ReactNode }) {
           </div>
         </div>
 
-        <div className="flex-1 h-[calc(100vh-80px)] sm:h-[calc(100vh-100px)]">
+        <div className="flex-1 h-[calc(100vh-80px)] sm:h-[calc(100vh-100px)] p-2">
           {children}
         </div>
       </div>
